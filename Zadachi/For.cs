@@ -149,22 +149,22 @@
 //9. Даны два целых числа A и B (A < B). Найти сумму квадратов всех целых
 //чисел от A до B включительно.
 
-//Console.Write("Введите A ");
-//int a = Convert.ToInt32(Console.ReadLine());
-//Console.Write("Введите B ");
-//int b = Convert.ToInt32(Console.ReadLine());
-//if (a < b)
-//{
-//    int sum = 0;
-//    for (int i = a; i <= b; i++)
-//    {
-//        Console.WriteLine(i);
-//        int c = (int)Math.Pow(i, 2);
-//        sum += c;
-//    }
-//    Console.WriteLine("сумма всех чисел " + sum);
-//}
-//else
-//{
-//    Console.WriteLine("А должно быть меньше В");
-//}
+Console.Write("Введите A ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите B ");
+int b = Convert.ToInt32(Console.ReadLine());
+if (a < b)
+{
+    int sum = 0;
+    for (int i = a; i <= b; i++)
+    {
+        Console.WriteLine(i);
+        int c = (int)Math.Pow(i, 2);
+        sum += c;
+    }
+    Console.WriteLine("сумма всех чисел " + sum);
+}
+else
+{
+    Console.WriteLine("А должно быть меньше В");
+}
