@@ -71,7 +71,7 @@
 //2, . . . , 10 кг конфет.
 
 //Console.Write("Введите цену за 1 кг конфет ");
-//int a = Convert.ToInt32(Console.ReadLine());
+//double a = Convert.ToDouble(Console.ReadLine());
 //for (int i = 1; i <= 10; i++)
 //{
 //    Console.WriteLine(i * a);
@@ -82,7 +82,7 @@
 //0.2, . . . , 1 кг конфет.
 
 //Console.Write("Введите цену за 1 кг конфет ");
-//int a = Convert.ToInt32(Console.ReadLine());
+//double a = Convert.ToDouble(Console.ReadLine());
 //for (double i = 0.1; i <= 1; i += 0.1)
 //{
 //    Console.WriteLine(i * a);
@@ -93,7 +93,7 @@
 //1.4, . . . , 2 кг конфет.
 
 //Console.Write("Введите цену за 1 кг конфет ");
-//int a = Convert.ToInt32(Console.ReadLine());
+//double a = Convert.ToDouble(Console.ReadLine());
 //for (double i = 1.2; i <= 2; i += 0.2)
 //{
 //    Console.WriteLine(i * a);
@@ -138,7 +138,7 @@
 //        Console.WriteLine(i);
 //        com *= i;
 //    }
-//    Console.WriteLine("сумма всех чисел " + com);
+//    Console.WriteLine("произведение всех чисел " + com);
 //}
 //else
 //{
@@ -149,22 +149,112 @@
 //9. Даны два целых числа A и B (A < B). Найти сумму квадратов всех целых
 //чисел от A до B включительно.
 
-Console.Write("Введите A ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите B ");
-int b = Convert.ToInt32(Console.ReadLine());
-if (a < b)
+//Console.Write("Введите A ");
+//int a = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Введите B ");
+//int b = Convert.ToInt32(Console.ReadLine());
+//if (a < b)
+//{
+//    int sum = 0;
+//    for (int i = a; i <= b; i++)
+//    {
+//        Console.WriteLine(i);
+//        int c = (int)Math.Pow(i, 2);
+//        sum += c;
+//    }
+//    Console.WriteLine("сумма квадратов всех чисел " + sum);
+//}
+//else
+//{
+//    Console.WriteLine("А должно быть меньше В");
+//}
+
+
+//? 10. Дано целое число N (> 0). Найти сумму 1 + 1 / 2 + 1 / 3 + . . . + 1 / N
+//(вещественное число).
+
+//Console.WriteLine("Введите N ");
+//int n = Convert.ToInt32(Console.ReadLine());
+//if (n > 0)
+//{
+//    double sum = 0;
+//    for (double i = 1; i <= 1/n; i += 1/i)
+//    {
+//        sum += 1/i;
+//    }
+//    Console.WriteLine("сумма всех чисел " + sum);
+//}
+//else
+//{
+//    Console.WriteLine("N должно быть больше 0");
+//}
+
+
+//33. Дано целое число N (> 1). Последовательность чисел Фибоначчи FK
+//(целого типа) определяется следующим образом: F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, ... .
+//Вывести элементы F1, F2, ..., FN .
+
+
+//36. Даны целые положительные числа N и K. Найти сумму 1**K + 2**K + . . . + N**K.
+
+//Console.WriteLine("Введите N ");
+//int n = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите K ");
+//int k = Convert.ToInt32(Console.ReadLine());
+//double sum = 0;
+//if (n > 0 && k > 0)
+//{
+//    for (int i = 1; i <= n; i++)
+//    {
+//        sum += Math.Pow(i, k);
+//    }
+//    Console.WriteLine(sum);
+//}
+//else
+//{
+//    Console.WriteLine("N и K должны быть положительными");
+//}
+
+
+//? 37.Дано целое число N (> 0). Найти сумму 1**1 + 2**2 + . . . + N**N
+
+//Console.WriteLine("Введите N ");
+//int n = Convert.ToInt32(Console.ReadLine());
+//double sum = 0;
+//if (n > 0)
+//{
+//    for (int i = 1; i <= n; i++)
+//    {
+//        for (int j = 1; j <= n; j++)
+//        {
+//            sum += Math.Pow(i, j);
+//        }
+//    }
+//    Console.WriteLine(sum);
+//}
+//else
+//{
+//    Console.WriteLine("N должен быть положительным");
+//}
+
+
+//?38.  Дано целое число N (> 0). Найти сумму 1**N + 2**N−1 + ... + N**1.
+
+Console.WriteLine("Введите N ");
+int n = Convert.ToInt32(Console.ReadLine());
+double sum = 0;
+if (n > 0)
 {
-    int sum = 0;
-    for (int i = a; i <= b; i++)
+    for (int i = 1; i <= n; i++)
     {
-        Console.WriteLine(i);
-        int c = (int)Math.Pow(i, 2);
-        sum += c;
+        for(int j = 0; j <= n; j++)
+        {
+            sum += Math.Pow(i, n-j);
+        }  
     }
-    Console.WriteLine("сумма всех чисел " + sum);
+    Console.WriteLine(sum);
 }
 else
 {
-    Console.WriteLine("А должно быть меньше В");
+    Console.WriteLine("N должен быть положительным");
 }
