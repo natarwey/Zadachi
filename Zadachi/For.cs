@@ -1,8 +1,5 @@
 ﻿using System;
 
-//if убрать, комиты, цикл в цикле выполняет счет степени, конвертацию через Parse, произведение - продукт,
-//^
-
 //1. Даны целые числа K и N (N > 0). Вывести N раз число K
 
 //Console.Write("Введите K: ");
@@ -124,9 +121,9 @@
 //for (int i = a; i <= b; i++)
 //{
 //    Console.WriteLine(i);
-//    sum += i*i;
+//    sum += i * i;
 //}
-//Console.WriteLine("сумма квадратов всех чисел " + sum);
+//Console.WriteLine($"сумма квадратов всех чисел {sum}");
 
 
 //10. Дано целое число N (> 0). Найти сумму 1 + 1 / 2 + 1 / 3 + . . . + 1 / N
@@ -159,10 +156,10 @@
 
 //Console.Write("Введите N: ");
 //int n = int.Parse(Console.ReadLine());
-//double product = 1;
-//for (double i = 1; i <= n; i++)
+//double product = 1.1, j = 1.2;
+//for (int i = 1; i < n; i++, j += 0.1) 
 //{
-//    product *= 1 + i / 10;
+//    product *= j;
 //}
 //Console.WriteLine("произведение всех чисел " + product);
 
@@ -200,7 +197,7 @@
 //A^N = A·A·...·A (числа A перемножаются N раз).
 
 //Console.Write("Введите A: ");
-//double a = int.Parse(Console.ReadLine());
+//double a = double.Parse(Console.ReadLine());
 //Console.Write("Введите N: ");
 //int n = int.Parse(Console.ReadLine());
 //double product = 1;
@@ -211,9 +208,100 @@
 //Console.WriteLine(product);
 
 
+//16. Дано вещественное число A и целое число N (> 0). Используя один
+//цикл, вывести все целые степени числа A от 1 до N.
+
+//Console.Write("Введите A: ");
+//double a = double.Parse(Console.ReadLine());
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine());
+//double result = a;
+//for (int i = 1; i <= n; i++)
+//{
+//    Console.Write(result + " ");
+//    result *= a;
+//}
+
+
+//17. Дано вещественное число A и целое число N (> 0). Используя один цикл, найти сумму
+// 1 + A + A^2 + A^3 + . . . + A^N
+
+//Console.Write("Введите A: ");
+//double a = double.Parse(Console.ReadLine());
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine());
+//double sum = 1, product = 1;
+//for (int i = 0; i < n; i++)
+//{
+//    product *= a;
+//    sum += product;
+//}
+//Console.WriteLine(sum);
+
+
+//18. Дано вещественное число A и целое число N (> 0). Используя один цикл, найти значение выражения
+//1 − A + A^2 − A^3 + . . . + (−1)^N ·A^N .
+//Условный оператор не использовать.
+
+//Console.Write("Введите A: ");
+//double a = double.Parse(Console.ReadLine());
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine());
+//double result = 1, product = 1;
+//for (int i = 0; i < n; i++)
+//{
+//    product *= a;
+//    result -= product;
+//}
+//Console.WriteLine(result);
+
+
+//19. Дано целое число N (> 0). Найти произведение N! = 1·2·...·N (N–факториал).
+//Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью вещественной переменной и вывести
+//его как вещественное число.
+
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine());
+//double factorial = 1.0;
+//for (int i = 1; i <= n; i++)
+//{
+//    factorial *= i;
+//}
+//Console.WriteLine($"Факториал числа {n} равен: {factorial}");
+
+
+//20. Дано целое число N (> 0). Используя один цикл, найти сумму 1! + 2! + 3! + . . . + N!
+//(выражение N! — N–факториал — обозначает произведение всех целых чисел от 1 до N: N! = 1·2·. . .·N).
+//Чтобы избежать целочисленного переполнения, проводить вычисления с помощью вещественных переменных
+//и вывести результат как вещественное число.
+
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine());
+//double sum = 0.0;
+//double factorial = 1.0;
+//for (int i = 1; i <= n; i++)
+//{
+//    factorial *= i;
+//    sum += factorial;
+//}
+//Console.WriteLine($"Сумма 1! + 2! + ... + N! для числа {n} равна: {sum}");
+
+
 //33. Дано целое число N (> 1). Последовательность чисел Фибоначчи FK
 //(целого типа) определяется следующим образом: F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, ... .
 //Вывести элементы F1, F2, ..., FN .
+
+//Console.Write("Введите N: ");
+//int n = int.Parse(Console.ReadLine()!);
+//int f1 = 0, f2 = 1, f3 = 1;
+//Console.Write($"{f1} {f2} {f3} ");
+//for (int i = 3; i <= n; i++)
+//{
+//    f1 = f2;
+//    f2 = f3;
+//    f3 = f1 + f2;
+//    Console.Write(f3 + " ");
+//}
 
 
 //36. Даны целые положительные числа N и K. Найти сумму 1^K + 2^K + . . . + N^K.
@@ -267,3 +355,36 @@
 //    degree = 1;
 //}
 //Console.WriteLine(sum);
+
+
+//39. Даны целые положительные числа A и B (A < B). Вывести все целые числа от A до B включительно;
+//при этом каждое число должно выводиться столько раз, каково его значение.
+
+//Console.Write("Введите A: ");
+//int a = int.Parse(Console.ReadLine());
+//Console.Write("Введите B: ");
+//int b = int.Parse(Console.ReadLine());
+//for (int i = a; i <= b; i++)
+//{
+//    for (int j = 0; j < i; j++)
+//    {
+//        Console.Write(i + " ");
+//    }
+//}
+//Console.WriteLine();
+
+
+//40. Даны целые числа A и B (A < B). Вывести все целые числа от A до B включительно;
+//при этом число A должно выводиться 1 раз, число A + 1 должно выводиться 2 раза и т.д.
+
+Console.Write("Введите A: ");
+int a = int.Parse(Console.ReadLine());
+Console.Write("Введите B: ");
+int b = int.Parse(Console.ReadLine());
+for (int i = a; i <= b; i++)
+{
+    for (int j = 0; j < i - a + 1; j++)
+    {
+        Console.Write(i + " ");
+    }
+}
