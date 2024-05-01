@@ -262,7 +262,7 @@
 
 //Console.Write("Введите N: ");
 //int n = int.Parse(Console.ReadLine());
-//double factorial = 1.0;
+//double factorial = 1;
 //for (int i = 1; i <= n; i++)
 //{
 //    factorial *= i;
@@ -277,8 +277,8 @@
 
 //Console.Write("Введите N: ");
 //int n = int.Parse(Console.ReadLine());
-//double sum = 0.0;
-//double factorial = 1.0;
+//double sum = 0;
+//double factorial = 1;
 //for (int i = 1; i <= n; i++)
 //{
 //    factorial *= i;
@@ -377,14 +377,14 @@
 //40. Даны целые числа A и B (A < B). Вывести все целые числа от A до B включительно;
 //при этом число A должно выводиться 1 раз, число A + 1 должно выводиться 2 раза и т.д.
 
-Console.Write("Введите A: ");
-int a = int.Parse(Console.ReadLine());
-Console.Write("Введите B: ");
-int b = int.Parse(Console.ReadLine());
-for (int i = a; i <= b; i++)
-{
-    for (int j = 0; j < i - a + 1; j++)
-    {
-        Console.Write(i + " ");
-    }
-}
+//Console.Write("Введите A: ");
+//int a = int.Parse(Console.ReadLine());
+//Console.Write("Введите B: ");
+//int b = int.Parse(Console.ReadLine());
+//for (int i = a; i <= b; i++)
+//{
+//    for (int j = 0; j < i - a + 1; j++)
+//    {
+//        Console.Write(i + " ");
+//    }
+//}
