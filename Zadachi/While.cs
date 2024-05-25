@@ -86,12 +86,3 @@ using System.Diagnostics.CodeAnalysis;
 //	sum += k;
 //}
 //Console.WriteLine($"наименьшее число равно {k}, сумма равна {sum}");
-
-
-//12. Дано целое число N (> 1). Вывести наибольшее из целых чисел K, для которых сумма 1 + 2 + . . . + K
-//будет меньше или равна N, и саму эту сумму.
-
-//Console.Write("Введите N: ");
-//int n = int.Parse(Console.ReadLine());
-
-

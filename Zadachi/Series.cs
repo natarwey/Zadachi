@@ -163,32 +163,30 @@
 //?17. Дано вещественное число B, целое число N и набор из N вещественных чисел, упорядоченных по возрастанию.
 //Вывести элементы набора вместе с числом B, сохраняя упорядоченность выводимых чисел.
 
-Console.Write($"Введите число B: ");
-double b = double.Parse(Console.ReadLine());
-Console.Write($"Введите число N: ");
-int n = int.Parse(Console.ReadLine());
-double num = 0;
-string s = ;
-for (int i = 1; i <= n; i++)
-{
-    Console.Write($"Введите {i} число: ");
-    num = double.Parse(Console.ReadLine());
-    while (b > num)
-    {
-        
-    }
-    b = Convert.ToString(b);
-    s = num + " " + b;
-    b = Convert.ToDouble(b);
-    //if (b < num)
-    //{
-    //    Console.WriteLine($"{num} {numbers}");
-    //}
-    //else
-    //{
-    //    Console.WriteLine($"{numbers} {num}");
-    //}
-}
-Console.WriteLine(s);
+//Console.Write($"Введите число B: ");
+//double b = double.Parse(Console.ReadLine());
+//Console.Write($"Введите число N: ");
+//int n = int.Parse(Console.ReadLine());
+//double num = 0;
+//string s = ;
+//for (int i = 1; i <= n; i++)
+//{
+//    Console.Write($"Введите {i} число: ");
+//    num = double.Parse(Console.ReadLine());
+//    while (b > num)
+//    {
 
-
+//    }
+//    b = Convert.ToString(b);
+//    s = num + " " + b;
+//    b = Convert.ToDouble(b);
+//    //if (b < num)
+//    //{
+//    //    Console.WriteLine($"{num} {numbers}");
+//    //}
+//    //else
+//    //{
+//    //    Console.WriteLine($"{numbers} {num}");
+//    //}
+//}
+//Console.WriteLine(s);
