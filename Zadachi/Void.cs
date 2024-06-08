@@ -12,16 +12,33 @@ namespace Zadachi
         {
             SayHello("Alex");
             Console.WriteLine(SumMathPow(5, 2));
-
+            SayHello("Ivan");
+            Console.WriteLine(Sum(1,2,3,4,5,6,7,8));
 
         }
-
+        static double Sum(double a, double b) => a + b;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         static int Sum(int a, int b)
         {
             return a + b;
         }
+        static int Sum(params int[] nums) => nums.Sum();
 
-        static void SayHello(string name)
+        //static void SayHello()
+        //{
+        //    //Console.WriteLine("Hello");
+        //}
+
+        /// <summary>
+        /// Says Helo to everybody
+        /// </summary>
+        /// <param name="name"></param>
+        static void SayHello(string name = "")
         {
             Console.WriteLine($"Hello {name}");
         }
