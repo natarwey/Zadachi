@@ -11,7 +11,7 @@ namespace Zadachi
         static void Main()
         {
             SayHello("Alex");
-            Console.WriteLine(MultiplicationBetween(2, 8));
+            Console.WriteLine(SumMathPow(5, 2));
 
 
         }
@@ -44,6 +44,17 @@ namespace Zadachi
                 factorial *= i;
             }
             return factorial;
+        }
+        
+        static int SumFactorial(int n) //сумма факториалов до n-го числа
+        {
+            int sum = 0, factorial = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+                sum += factorial;
+            }
+            return sum;
         }
 
         static int Fibonachi(int n)
@@ -97,6 +108,21 @@ namespace Zadachi
                 multiplication *= i;
             }
             return multiplication;
+        }
+
+        static int SumMathPow(int n, int k) //сумма 1^K + 2^K + . . . + N^K
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                int degree = 1;
+                for (int j = 1; j <= k; j++)
+                {
+                    degree *= i; //вложенный цикл нахождения степени
+                }
+                sum += degree;
+            }
+            return sum;
         }
     }
 }
